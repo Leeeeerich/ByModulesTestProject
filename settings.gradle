@@ -1,2 +1,4 @@
+include ':fileExhibitsLoader'
+include ':model'
 include ':app'
 rootProject.name = "ByModulesTestProject"
