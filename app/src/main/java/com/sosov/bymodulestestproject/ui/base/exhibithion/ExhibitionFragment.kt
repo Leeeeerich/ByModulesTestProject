@@ -36,7 +36,7 @@ class ExhibitionFragment : Fragment() {
     }
 
     private fun observableExhibits() {
-        vm.getExhibitsLiveData().observe(requireActivity(), {
+        vm.getExhibitsLiveData().observe(viewLifecycleOwner, {
             if (it != null) {
                 adapter.exhibits = it.toMutableList()
             }

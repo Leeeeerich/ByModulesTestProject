@@ -5,7 +5,7 @@ import com.sosov.model.Exhibit
 
 class RepositoryImpl(private val fileExhibitsLoader: FileExhibitsLoader) : Repository {
 
-    override fun loadExhibits(): List<Exhibit> {
+    override suspend fun loadExhibits(): List<Exhibit> {
         return fileExhibitsLoader.getExhibitList()
     }
 }
